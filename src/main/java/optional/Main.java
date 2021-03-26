@@ -1,5 +1,6 @@
 package optional;
 
+import freemarker.template.TemplateException;
 import optional.catalog.Catalog;
 import optional.catalog.CatalogUtil;
 import optional.catalog.InvalidCatalogException;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 public class Main {
-    public static void main(String args[]) throws IOException, InvalidCatalogException, InvalidItemException, InvalidCommandSpecificationException {
+    public static void main(String args[]) throws IOException, InvalidCatalogException, InvalidItemException, InvalidCommandSpecificationException, TemplateException {
         Main app = new Main();
         app.testCreateSave();
         app.testLoadView();
@@ -20,6 +21,7 @@ public class Main {
 
     /**
      * a function that creates and saves the catalog
+     *
      * @throws IOException
      * @throws InvalidItemException
      */
@@ -44,13 +46,17 @@ public class Main {
 
     /**
      * a function that loads, plays different items and finds items by their ID
+     *
      * @throws InvalidCatalogException
      * @throws IOException
      */
-    private void testLoadView() throws InvalidCatalogException, IOException, InvalidCommandSpecificationException {
-        Catalog catalog=ReadCommand.read();
+    private void testLoadView() throws InvalidCatalogException, IOException, InvalidCommandSpecificationException, TemplateException {
+        Catalog catalog = ReadCommand.read();
         ReadCommand.read();
         //PlayCommand firstplay = new PlayCommand(catalog.getItems().get(1));
         System.out.println(catalog.findById(67));
+        ReportCommand.configureFreeMarker();
+        ReportCommand letsReport = new ReportCommand();
+        letsReport.run();
     }
 }

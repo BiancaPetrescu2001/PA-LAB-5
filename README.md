@@ -35,7 +35,7 @@ The final form of the application will be an executable JAR archive. Identify th
 ## Solved tasks
 
 As of today (22.03.2021) I have solved all tasks regarding the compulsory task.
-On the 26th of March I have solved the optional tasks except for the FreeMarker report.
+On the 26th of March I have solved the optional tasks..
 ## Build and run
 
 To compile and run my project I have typed the following commands in the terminal:
