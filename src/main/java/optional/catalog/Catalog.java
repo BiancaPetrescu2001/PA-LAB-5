@@ -12,19 +12,27 @@ public class Catalog implements Serializable{
     private String name;
     private String path;
     private ArrayList<Item> items = new ArrayList<>();
+    public static int id=0;
+    public static ArrayList<Catalog> listOfCatalogs = new ArrayList<>();
 
     public Catalog(String name, String path, ArrayList<Item> items) {
         this.name = name;
         this.path = path;
         this.items = items;
+        listOfCatalogs.add(this);
+        id++;
     }
 
     public Catalog(String name, String path) {
         this.name = name;
         this.path = path;
+        listOfCatalogs.add(this);
+        id++;
     }
 
     public Catalog() {
+        listOfCatalogs.add(this);
+        id++;
     }
 
     public String getName() {
