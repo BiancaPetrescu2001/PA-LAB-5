@@ -35,7 +35,7 @@ The final form of the application will be an executable JAR archive. Identify th
 ## Solved tasks
 
 As of today (22.03.2021) I have solved all tasks regarding the compulsory task.
-
+On the 26th of March I have solved the optional tasks except for the FreeMarker report.
 ## Build and run
 
 To compile and run my project I have typed the following commands in the terminal:
@@ -53,4 +53,45 @@ Item{id='23', name='My photo', location='D:\catalog\caption.jpg'}
 Item{id='67', name='Hollywood hills', location='D:\catalog\song1.mp3'}
 ```
 
+The output for the optional part is:
+```bash
+Enter command: 
+add
+Enter catalog ID: 
+0
+Enter item ID: 
+0
+S-a executat comanda
+Enter command: 
+add
+Enter catalog ID: 
+0
+Enter item ID: 
+1
+S-a executat comanda
+Enter command: 
+save
+Enter catalog ID: 
+0
+S-a executat comanda
+Enter command: 
+list
+Enter catalog ID: 
+0
+Item{id='67', name='Hollywood hills', location='D:\catalog\song1.mp3'}
+Item{id='23', name='My photo', location='D:\catalog\caption.jpg'}
+S-a executat comanda
+Enter command: 
+load
+Enter catalog path: 
+D:\catalog\catalog.ser
+S-a executat comanda
+Enter command: 
+play
+Enter item ID: 
+1
+S-a executat comanda
+Item{id='67', name='Hollywood hills', location='D:\catalog\song1.mp3'}
 
+Process finished with exit code 0
+```

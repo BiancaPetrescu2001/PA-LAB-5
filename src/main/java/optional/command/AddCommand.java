@@ -5,6 +5,9 @@ import optional.items.Item;
 
 import java.util.ArrayList;
 
+/**
+ * the class representing the command add
+ */
 public class AddCommand extends Command{
     private Catalog catalog;
     private Item item;

@@ -4,6 +4,9 @@ package optional.command;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * the abstract class of commands
+ */
 public abstract class Command implements Serializable {
     protected String name;
 

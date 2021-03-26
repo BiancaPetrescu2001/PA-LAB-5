@@ -5,6 +5,9 @@ import optional.items.Item;
 
 import java.util.ArrayList;
 
+/**
+ * the class representing the command list
+ */
 public class ListCommand extends Command{
     private Catalog catalog;
 

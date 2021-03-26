@@ -5,6 +5,9 @@ import optional.catalog.InvalidCatalogException;
 
 import java.io.*;
 
+/**
+ * the class representing the command load
+ */
 public class LoadCommand extends Command{
     private String path;
 

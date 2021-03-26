@@ -7,6 +7,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 public class ReadCommand {
+    /**
+     * A method that reads the command from the console and calls the function execute(command)
+     * @return
+     * @throws IOException
+     * @throws InvalidCommandSpecificationException
+     * @throws InvalidCatalogException
+     */
     public static Catalog read() throws IOException, InvalidCommandSpecificationException, InvalidCatalogException{
         {
             System.out.println("Enter command: ");
@@ -19,6 +26,16 @@ public class ReadCommand {
             return execute(command);
         }
     }
+
+    /**
+     *
+     * @param command : the string representing the command's name in the console
+     * @return : returns the catalog for the load command, otherwise returns null and the return value in these cases
+     * is not used or needed
+     * @throws InvalidCommandSpecificationException : if the command is not add, save, list, load or play an exception is thrown
+     * @throws IOException
+     * @throws InvalidCatalogException
+     */
     public static Catalog execute(String command) throws InvalidCommandSpecificationException, IOException, InvalidCatalogException {
         if(command.equalsIgnoreCase("ADD"))
         {
@@ -81,6 +98,9 @@ public class ReadCommand {
             PlayCommand letsPlay = new PlayCommand(item);
             System.out.println("S-a executat comanda");
         }
+        /**
+         * if the name of the command is not one of the ones above, an exception is thrown
+         */
         else{
             throw new InvalidCommandSpecificationException("No such command exists");
         }

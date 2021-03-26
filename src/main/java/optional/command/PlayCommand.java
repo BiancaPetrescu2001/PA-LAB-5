@@ -6,6 +6,9 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * the class representing the command play
+ */
 public class PlayCommand extends Command{
     private Item item;
 

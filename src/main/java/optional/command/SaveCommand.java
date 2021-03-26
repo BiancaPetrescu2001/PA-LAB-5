@@ -6,6 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+/**
+ * the class representing the command save
+ */
 public class SaveCommand extends Command{
 
     private Catalog catalog;
